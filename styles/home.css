@@ -40,6 +40,13 @@ body {
   text-decoration: none;
   border: 0.5px;
   padding: 14px 16px 14px 16px;
+  transition: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: black;
 }
 
 #brand {
@@ -175,11 +182,92 @@ body {
   flex-wrap: wrap;
 }
 
-#solutions img {
-  display: block;
+.solution-card {
+  position: relative;
   flex: 0 1 264px;
   width: 264px;
   max-width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.solution-card::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  transition: background-color 350ms ease;
+}
+
+.solution-card > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 350ms ease;
+}
+
+.solution-hover {
+  position: absolute;
+  right: 8px;
+  bottom: -100%;
+  left: 8px;
+  z-index: 2;
+  min-height: 212px;
+  padding: 24px 20px 84px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  transition: bottom 350ms ease;
+}
+
+.solution-hover h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.solution-hover p {
+  max-width: 205px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.solution-hover button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  background-color: #1c1c1c;
+  color: #ffffff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.solution-card:hover .solution-hover,
+.solution-card:focus-visible .solution-hover {
+  bottom: 8px;
+}
+
+.solution-card:hover::before,
+.solution-card:focus-visible::before {
+  background-color: rgb(0 0 0 / 38%);
+}
+
+.solution-card:hover > img,
+.solution-card:focus-visible > img {
+  transform: scale(1.02);
+}
+
+.solution-card:focus-visible {
+  box-shadow: 0 0 0 3px #011fbd;
 }
 
 #trust {
