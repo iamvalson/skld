@@ -99,15 +99,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  overflow: hidden;
 }
 
 #hero-img img {
   display: block;
   max-width: 100%;
   height: auto;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
 
 #trusted {
@@ -117,13 +116,13 @@ body {
   gap: 80px;
 }
 
-#trusted-content {
+.section-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-#trusted-content h2 {
+.section-content h2 {
   width: 419px;
   font-size: 36px;
   font-weight: 700;
@@ -131,7 +130,7 @@ body {
   letter-spacing: -0.25px;
 }
 
-#trusted-content p {
+.section-content p {
   width: 427px;
 }
 
@@ -146,4 +145,219 @@ body {
   width: 140px;
   height: 140px;
   object-fit: contain;
+}
+
+#solutions {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+#solutions img {
+  display: block;
+  flex: 0 1 264px;
+  width: 264px;
+  max-width: 100%;
+}
+
+#trust {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#trust img {
+  width: 452px;
+  height: 436px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#trust-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+#trust-section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.trust-text {
+  display: flex;
+  flex-direction: column;
+  gap: 20;
+}
+
+.trust-text p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.trust-desc {
+  font-size: 24px;
+  color: #011fbd;
+  letter-spacing: -1.2px;
+}
+
+#see-more {
+  padding: 14px 16px;
+  background-color: #000000;
+  border: 0.5px #000000;
+  color: white;
+}
+
+#stats {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stats-content {
+  background-color: #1c1c1c0d;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 240px;
+  gap: 72px;
+  border-radius: 16px;
+}
+
+.stats-content h2 {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.stats-content p {
+  width: 224px;
+  font-size: 14px;
+  color: #333333;
+}
+
+#purpose {
+  padding: 100px 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  background-color: #1c1c1c;
+  border-radius: 40px;
+  color: #ffffff;
+}
+
+.purpose-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.purpose-intro h2 {
+  width: 419px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 46px;
+  letter-spacing: -0.25px;
+}
+
+.purpose-intro p {
+  width: 427px;
+}
+
+.purpose-grid {
+  display: grid;
+  width: 1116px;
+  max-width: 100%;
+  margin-inline: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.purpose-card,
+.purpose-image {
+  min-height: 184px;
+  border-radius: 9px;
+}
+
+.purpose-card {
+  height: 336px;
+  padding: 24px 22px 20px;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.purpose-number {
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -1.2px;
+}
+
+.purpose-card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.purpose-card p {
+  max-width: 270px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #f2f2f2;
+}
+
+.purpose-image {
+  display: block;
+  width: 100%;
+  height: 336px;
+  object-fit: cover;
+}
+
+.purpose-grid .purpose-image:nth-of-type(2) {
+  object-position: 68% center;
+}
+
+.purpose-grid .purpose-image:nth-of-type(3) {
+  object-position: 42% center;
+}
+
+@media (max-width: 800px) {
+  #purpose {
+    margin: 0 16px 24px;
+    padding: 40px 24px;
+    border-radius: 28px;
+  }
+
+  .purpose-intro {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .purpose-intro p {
+    max-width: 360px;
+  }
+
+  .purpose-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .purpose-card,
+  .purpose-image {
+    min-height: 190px;
+    height: auto;
+  }
 }
